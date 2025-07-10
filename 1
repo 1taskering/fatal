@@ -5160,12 +5160,6 @@ function library:Load(options)
 
         local theme_options = {"Accent", "Window Background", "Window Border", "Black Border", "Text", "Disabled Text", "Tab Background", "Tab Border", "Section Background", "Section Border", "Object Background", "Object Border", "Dropdown Option Background"}
 
-        local theme_dropdown = themes:Dropdown{
-            name = "Theme",
-            content = library:GetThemes(),
-            flag = "selected_theme",
-        }
-
         for _, option in next, theme_options do
             theme_colorpickers[option] = customTheme:Colorpicker{
                 name = option,
@@ -5233,7 +5227,7 @@ function library:Load(options)
             end
         }
 
-        local misc = settings:Section{name = "Cheat", Side = "right"}
+        local misc = settings:Section{name = "Extra", Side = "right"}
 
         misc:Toggle{
             name = "Show Keybind List",
