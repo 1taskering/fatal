@@ -712,19 +712,19 @@ local library = {
     font_size = 13,
     themes = {
         Default = {
-            ["Accent"] = fromRGB(113, 93, 133),
-            ["Window Background"] = fromRGB(30, 30, 30),
-            ["Window Border"] = fromRGB(65, 65, 65),
-            ["Black Border"] = fromRGB(10, 10, 10),
-            ["Text"] = fromRGB(210, 210, 210),
-            ["Disabled Text"] = fromRGB(110, 110, 110),
-            ["Tab Background"] = fromRGB(25, 25, 25),
-            ["Tab Border"] = fromRGB(45, 45, 45),
-            ["Section Background"] = fromRGB(30, 30, 30),
-            ["Section Border"] = fromRGB(45, 45, 45),
-            ["Object Background"] = fromRGB(25, 25, 25),
-            ["Object Border"] = fromRGB(45, 45, 45),
-            ["Dropdown Option Background"] = fromRGB(19, 19, 19)
+            ["Accent"] = fromRGB(128, 0, 255), -- Bright purple for highlights
+            ["Window Background"] = fromRGB(20, 20, 20), -- Darker black for clean background
+            ["Window Border"] = fromRGB(50, 50, 50), -- Slightly lighter black for contrast
+            ["Black Border"] = fromRGB(10, 10, 10), -- Deep black for strong outlines
+            ["Text"] = fromRGB(220, 220, 220), -- Light gray for clear, readable text
+            ["Disabled Text"] = fromRGB(120, 120, 120), -- Muted gray for disabled states
+            ["Tab Background"] = fromRGB(25, 25, 25), -- Dark black for tab consistency
+            ["Tab Border"] = fromRGB(70, 0, 140), -- Subtle purple tint for tab borders
+            ["Section Background"] = fromRGB(22, 22, 22), -- Near-black for section depth
+            ["Section Border"] = fromRGB(70, 0, 140), -- Purple-accented border for sections
+            ["Object Background"] = fromRGB(25, 25, 25), -- Consistent dark for objects
+            ["Object Border"] = fromRGB(70, 0, 140), -- Purple-tinted object borders
+            ["Dropdown Option Background"] = fromRGB(15, 15, 15) -- Darkest black for dropdown contrast
         }
     }
 }
@@ -5547,7 +5547,7 @@ library.Playerlist:Label{name = "Team: ", handler = function(plr)
 end}
 
 
-local watermark = library:Watermark("fatal | dev | beta | 500")
+local watermark = library:Watermark("exodus | dev | test | 2.3b fps")
 window:SettingsTab(watermark)
 
 local tab = window:Tab("rage")
