@@ -5152,9 +5152,9 @@ function library:Load(options)
     function window_types:settingsTab(watermark, unload)
         unload = unload or function() library.unload(library) end
 
-        local settings = self:Tab("Settings")
+        local settings = self:Tab("settings")
 
-        local themes, customTheme = Settings:multiSection{Side = "middle", Sections = { "Themes", "Custom Theme" }}
+        local themes, customTheme = settings:multiSection{Side = "middle", Sections = { "Themes", "Custom Theme" }}
         local theme_colorpickers = {}
         library.theme_colorpickers = theme_colorpickers;
 
